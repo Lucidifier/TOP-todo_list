@@ -1,8 +1,11 @@
 import './style.css';
+import './modules/projects/projectModuleStyle.css';
 import {projectArr} from './modules/projects/project.js';
-import createNewProject from './modules/projects/createProject.js';
-import renderProjectsModule from './modules/projects/renderProjects.js';
+import createDefaultProject from './modules/projects/createProject.js';
+import renderProjectsModule from './modules/projects/renderProjectsModule.js';
+import addEventListeners from './modules/projects/eventListeners.js';
 
-createNewProject();
+createDefaultProject();
 renderProjectsModule();
+addEventListeners();
 console.log(projectArr);

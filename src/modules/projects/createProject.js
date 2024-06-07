@@ -1,10 +1,10 @@
 import {projectArr, Project} from './project.js'
 
-function createNewProject() {
+function createDefaultProject() {
   const newProject = new Project();
   newProject.name = 'Default Project';
   newProject.description = 'This is a default project';
   projectArr.push(newProject);
 }
 
-export default createNewProject;
+export default createDefaultProject;
