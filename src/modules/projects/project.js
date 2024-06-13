@@ -4,6 +4,7 @@ class Project {
   constructor() {
     this.name;
     this.description;
+    this.listArray = [];
   }
 
   setProjectName(newProjectName) {
@@ -12,6 +13,10 @@ class Project {
 
   setDescription(newProjectDescription) {
     this. description = newProjectDescription;
+  }
+
+  createTodo(newTodo) {
+    this.listArray.push(newTodo);
   }
 
 }

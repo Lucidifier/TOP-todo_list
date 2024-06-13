@@ -10,7 +10,6 @@ function renderCurrentProject() {
   currentProject.appendChild(currentProjectName);
   currentProject.appendChild(currentProjectDescription);
   projectsModuleContent.appendChild(currentProject);
-  return currentProject;
 }
 
 export default renderCurrentProject;
