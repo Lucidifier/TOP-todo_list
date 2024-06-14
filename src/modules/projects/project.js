@@ -1,9 +1,9 @@
 const projectArr = [];
 
 class Project {
-  constructor() {
-    this.name;
-    this.description;
+  constructor(name, description) {
+    this.name = name;
+    this.description = description;
     this.listArray = [];
   }
 
