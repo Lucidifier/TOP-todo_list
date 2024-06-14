@@ -1,3 +1,5 @@
+import createNewProject from "./projectFromButton";
+
 function addProjectInfo() {
   //clear projects module 
   const projectsModuleContent = document.querySelector('.projects_section_content');
@@ -13,13 +15,13 @@ function addProjectInfo() {
   const projectAddButton = document.createElement('button');
 
   projectNameLabel.innerText = 'Name: ';
-  projectNameLabel.for = 'projectName';
+  projectNameLabel.setAttribute('for', 'projectName');
   projectNameInput.type = 'text';
   projectNameInput.id = 'projectName';
   projectNameInput.name = 'projectName';
 
   projectDescriptionLabel.innerText = 'Description: ';
-  projectDescriptionLabel.for = 'projectDescription';
+  projectDescriptionLabel.setAttribute('for', 'projectDescription');
   projectDescriptionInput.type = 'text';
   projectDescriptionInput.id = 'projectDescription';
   projectDescriptionInput.name = 'projectDescription';
@@ -33,6 +35,12 @@ function addProjectInfo() {
   newProjectForm.appendChild(projectAddButton);
 
   projectsModuleContent.appendChild(newProjectForm);
+
+  newProjectForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+  });
+  projectAddButton.addEventListener('click', createNewProject);
+
   console.log('project form');
 }
 
