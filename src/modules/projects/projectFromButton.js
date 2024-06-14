@@ -13,8 +13,11 @@ function createNewProject() {
     name: nameValue,
     description: descriptionValue
   };
+
+  localStorage.clear();
   const createdProjectJson = JSON.stringify(createdProject);
   localStorage.setItem('newCreatedProject', createdProjectJson); 
+  console.log(localStorage.newCreatedProject);
 
   renderProjectsModule();
 }
