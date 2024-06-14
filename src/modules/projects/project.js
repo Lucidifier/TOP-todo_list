@@ -5,6 +5,7 @@ class Project {
     this.name = name;
     this.description = description;
     this.listArray = [];
+    this.selected = 0;
   }
 
   setProjectName(newProjectName) {

@@ -17,6 +17,7 @@ function renderCurrentProject() {
     let currentProjectDescription = document.createElement('p');
     currentProjectName.innerText = projectArr[i].name;
     currentProjectDescription.innerText = projectArr[i].description;
+    currentProject.setAttribute('data-id', i);
     currentProject.appendChild(currentProjectName);
     currentProject.appendChild(currentProjectDescription);
     projectsModuleCurrentProjects.appendChild(currentProject);
