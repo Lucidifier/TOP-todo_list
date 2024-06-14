@@ -5,7 +5,7 @@ import addProjectInfo from "./createProjectForm";
 import createNewProject from "./projectFromButton";
 
 function addEventListeners() {
-  const addNew = document.querySelector('.projects_section_content > div:nth-child(3)');
+  const addNew = document.querySelector('.projects_section_content > div:last-child');
   // addNew.addEventListener('click', addNewProject);
   addNew.addEventListener('click', addProjectInfo);
 
