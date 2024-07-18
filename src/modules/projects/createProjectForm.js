@@ -41,7 +41,6 @@ function addProjectInfo() {
   });
   projectAddButton.addEventListener('click', createNewProject);
 
-  console.log('project form');
 }
 
 export default addProjectInfo;

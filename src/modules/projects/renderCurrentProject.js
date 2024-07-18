@@ -1,6 +1,8 @@
 import { projectArr } from "./project";
 
 function renderCurrentProject() {
+  console.log('renderCurrentProjects');
+  console.log(projectArr);
   const projectsModuleContent = document.querySelector('.projects_section_content');
   const projectsModuleCurrentProjects = document.createElement('div');
 
@@ -10,7 +12,6 @@ function renderCurrentProject() {
   projectArr.push(projectParsed);  
   }
 
-  console.log(projectArr);
   for (let i=0; i< projectArr.length; i++) {
     let currentProject = document.createElement('div');
     let currentProjectName = document.createElement('p');

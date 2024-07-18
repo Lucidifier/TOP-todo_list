@@ -9,7 +9,6 @@ function addNewProject() {
   projectArr.splice(0,1);
   projectArr.push(newProject);
   renderProjectsModule();
-  console.log('add');
 }
 
 

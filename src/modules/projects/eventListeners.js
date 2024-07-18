@@ -3,39 +3,42 @@ import renderProjectFunctionality from "./renderProjectFunctionality";
 import renderProjectsModule from "./renderProjectsModule";
 import addProjectInfo from "./createProjectForm";
 import createNewProject from "./projectFromButton";
-import selectCurrentProject from "./clickSelectCurrentProject";
 import { projectArr } from "./project";
+import removeSelectedProject from "./removeCurrentProject";
 
 function addEventListeners() {
-  const addNew = document.querySelector('.projects_section_content > div:last-child');
-  const projectList = document.querySelectorAll('.projects_section_content > div:nth-child(2) > div')
+  const addNew = document.querySelector('.projects_section_content > div:last-child > div:nth-child(1)');
+  const projectList = document.querySelectorAll('.projects_section_content > div:nth-child(2) > div');
+  const removeProjectButton = document.querySelector('.projects_section_content > div:last-child > div:nth-child(2)');
   // addNew.addEventListener('click', addNewProject);
   addNew.addEventListener('click', addProjectInfo);
 
-  console.log(projectList);
-  //ADD EVENT LISTENER  TO EACH PROJECT IN  PROJECT LIST
-  projectList.forEach(node => {
-    node.addEventListener('click', function() {
-      let dataValue = this.dataset.id;
-      console.log(dataValue);
-      //RESET EACH PROJECT
-      projectList.forEach(project => {
-        project.removeAttribute('class');
-      })
+  function resetProjects() {
+    projectList.forEach(node => {
+      node.removeAttribute('class');
       projectArr.forEach(elem => {
         elem.selected = 0;
       })
-    
+    });
+    console.log('Projects reseted');
+  }
+
+  //ADD EVENT LISTENER  TO EACH PROJECT IN  PROJECT LIST
+  projectList.forEach(node => {
+    node.addEventListener('click', function() {
+      resetProjects();
+      let dataValue = this.dataset.id;
       projectArr[dataValue].selected = 1;
       node.setAttribute('class', 'project_selected');
       console.log(projectArr);
     })
   })
+
+  removeProjectButton.addEventListener('click', removeSelectedProject);
   // projectList.addEventListener('click', selectCurrentProject);
 
   // const addButton = document.querySelector('.projects_section_content > form');
   // addButton.addEventListener('click', createNewProject);
-  console.log('event listener');
 }
 
 export default addEventListeners;

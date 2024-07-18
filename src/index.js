@@ -5,9 +5,7 @@ import createDefaultProject from './modules/projects/createDefaultProject.js';
 import renderProjectsModule from './modules/projects/renderProjectsModule.js';
 import addEventListeners from './modules/projects/eventListeners.js';
 
-console.log(projectArr);
 localStorage.clear();
 createDefaultProject();
 renderProjectsModule();
 addEventListeners();
-console.log(projectArr);

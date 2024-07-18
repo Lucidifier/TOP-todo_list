@@ -19,6 +19,8 @@
 
 .projects_section_content > div:nth-child(3) {
   flex: 1 1 30%;
+  display: flex;
+  gap: 50px;
 }
 
 .project_selected {
