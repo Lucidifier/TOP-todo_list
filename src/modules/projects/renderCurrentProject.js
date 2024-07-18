@@ -10,6 +10,7 @@ function renderCurrentProject() {
   const projectJsonString = localStorage.getItem('newCreatedProject');
   const projectParsed = JSON.parse(projectJsonString);
   projectArr.push(projectParsed);  
+  localStorage.clear();
   }
 
   for (let i=0; i< projectArr.length; i++) {

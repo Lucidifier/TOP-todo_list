@@ -5,6 +5,7 @@ import addProjectInfo from "./createProjectForm";
 import createNewProject from "./projectFromButton";
 import { projectArr } from "./project";
 import removeSelectedProject from "./removeCurrentProject";
+import resetProjects from "./resetProjectsStatus";
 
 function addEventListeners() {
   const addNew = document.querySelector('.projects_section_content > div:last-child > div:nth-child(1)');
@@ -12,16 +13,6 @@ function addEventListeners() {
   const removeProjectButton = document.querySelector('.projects_section_content > div:last-child > div:nth-child(2)');
   // addNew.addEventListener('click', addNewProject);
   addNew.addEventListener('click', addProjectInfo);
-
-  function resetProjects() {
-    projectList.forEach(node => {
-      node.removeAttribute('class');
-      projectArr.forEach(elem => {
-        elem.selected = 0;
-      })
-    });
-    console.log('Projects reseted');
-  }
 
   //ADD EVENT LISTENER  TO EACH PROJECT IN  PROJECT LIST
   projectList.forEach(node => {
