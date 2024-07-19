@@ -6,11 +6,13 @@ import createNewProject from "./projectFromButton";
 import { projectArr } from "./project";
 import removeSelectedProject from "./removeCurrentProject";
 import resetProjects from "./resetProjectsStatus";
+import editProjectInfo from "./editProjectInfo";
 
 function addEventListeners() {
   const addNew = document.querySelector('.projects_section_content > div:last-child > div:nth-child(1)');
   const projectList = document.querySelectorAll('.projects_section_content > div:nth-child(2) > div');
   const removeProjectButton = document.querySelector('.projects_section_content > div:last-child > div:nth-child(2)');
+  const editProjectInfoButton = document.querySelector('.projects_section_content > div:last-child > div:nth-child(3)');
   // addNew.addEventListener('click', addNewProject);
   addNew.addEventListener('click', addProjectInfo);
 
@@ -30,6 +32,8 @@ function addEventListeners() {
 
   // const addButton = document.querySelector('.projects_section_content > form');
   // addButton.addEventListener('click', createNewProject);
+
+  editProjectInfoButton.addEventListener('click', editProjectInfo);
 }
 
 export default addEventListeners;

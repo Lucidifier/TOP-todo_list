@@ -1,4 +1,4 @@
-import { projectArr } from "./project";
+import { Project, projectArr } from "./project";
 
 function renderCurrentProject() {
   console.log('renderCurrentProjects');
@@ -9,6 +9,7 @@ function renderCurrentProject() {
   if(localStorage.length > 0) {
   const projectJsonString = localStorage.getItem('newCreatedProject');
   const projectParsed = JSON.parse(projectJsonString);
+  Object.setPrototypeOf(projectParsed, Project.prototype);
   projectArr.push(projectParsed);  
   localStorage.clear();
   }

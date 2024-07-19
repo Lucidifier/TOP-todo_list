@@ -3,6 +3,7 @@ import renderTodosList from "./renderTodosList";
 import renderProjectFunctionality from "./renderProjectFunctionality";
 import addEventListeners from "./eventListeners";
 import { projectArr } from "./project";
+import resetProjects from "./resetProjectsStatus";
 
 function renderProjectsModule() {
   console.log('renderProjectsModule');
@@ -11,10 +12,11 @@ function renderProjectsModule() {
   while (projectsModuleContent.firstChild) {
     projectsModuleContent.removeChild(projectsModuleContent.firstChild);
   };
- renderTodosList();
- renderCurrentProject();
- renderProjectFunctionality();
- addEventListeners();
+  renderTodosList();
+  renderCurrentProject();
+  renderProjectFunctionality();
+  addEventListeners();
+  resetProjects();
 }
 
 export default renderProjectsModule;
