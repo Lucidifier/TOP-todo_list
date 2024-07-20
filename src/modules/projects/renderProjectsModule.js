@@ -4,6 +4,7 @@ import renderProjectFunctionality from "./renderProjectFunctionality";
 import addEventListeners from "./eventListeners";
 import { projectArr } from "./project";
 import resetProjects from "./resetProjectsStatus";
+import createDefaultProject from "./createDefaultProject";
 
 function renderProjectsModule() {
   console.log('renderProjectsModule');
