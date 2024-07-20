@@ -1,5 +1,6 @@
 import renderTodoDetails from "./renderTodoDetails";
 import renderTodosFunctionality from "./renderTodosFunctionality";
+import createEventListeners from "./eventListeners";
 
 function renderTodosModule() {
   const todosModuleContent = document.querySelector('.todos_section_content');
@@ -9,6 +10,7 @@ function renderTodosModule() {
 
   renderTodoDetails();
   renderTodosFunctionality();
+  createEventListeners();
 }
 
 export default renderTodosModule;
