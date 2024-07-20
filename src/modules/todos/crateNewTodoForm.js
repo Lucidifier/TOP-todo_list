@@ -1,3 +1,5 @@
+import createNewTodo from "./createNewTodo";
+
 function createNewTodoForm() {
   //clear todo details section
   const todoDetailsSection = document.querySelector('.todos_section_content > div:first-child');
@@ -49,7 +51,7 @@ function createNewTodoForm() {
 
   todoDetailsSection.appendChild(newTodoForm);
 
-  todoAddButton.addEventListener('click', () => console.log('just created a new todo'));
+  todoAddButton.addEventListener('click', createNewTodo);
 
   newTodoForm.addEventListener('submit', function(event) {
     event.preventDefault();

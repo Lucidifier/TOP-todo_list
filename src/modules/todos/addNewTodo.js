@@ -1,7 +1,7 @@
 import { projectArr } from "../projects/project";
 import createNewTodoForm from "./crateNewTodoForm";
 
-function createNewTodo() {
+function addNewTodo() {
   projectArr.forEach(elem => {
     if (elem.selected === 1) {
       createNewTodoForm();
@@ -11,4 +11,4 @@ function createNewTodo() {
   })
 }
 
-export default createNewTodo;
+export default addNewTodo;
