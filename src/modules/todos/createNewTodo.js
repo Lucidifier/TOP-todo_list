@@ -1,5 +1,8 @@
 import Todo from "./todos";
 import { projectArr } from "../projects/project";
+import renderTodosModule from "./renderTodosModule";
+import resetProjects from "../projects/resetProjectsStatus";
+import renderProjectsModule from "../projects/renderProjectsModule";
 
 function createNewTodo() {
   const todoTitle = document.querySelector('.new_todo_form > input:nth-child(2)');
@@ -22,6 +25,9 @@ function createNewTodo() {
   })
 
   console.log(projectArr);
+  renderTodosModule();
+  renderProjectsModule();
+
 }
 
 export default createNewTodo;

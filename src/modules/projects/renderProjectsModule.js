@@ -17,7 +17,6 @@ function renderProjectsModule() {
   renderCurrentProject();
   renderProjectFunctionality();
   addEventListeners();
-  resetProjects();
 }
 
 export default renderProjectsModule;
