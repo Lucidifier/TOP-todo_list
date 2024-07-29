@@ -13,6 +13,7 @@ function renderProjectsModule() {
   while (projectsModuleContent.firstChild) {
     projectsModuleContent.removeChild(projectsModuleContent.firstChild);
   };
+  createDefaultProject();
   renderTodosList();
   renderCurrentProject();
   renderProjectFunctionality();

@@ -6,20 +6,20 @@ function renderCurrentProject() {
   const projectsModuleContent = document.querySelector('.projects_section_content');
   const projectsModuleCurrentProjects = document.createElement('div');
 
-  if(localStorage.length > 0) {
-  const projectJsonString = localStorage.getItem('newCreatedProject');
-  const projectParsed = JSON.parse(projectJsonString);
-  Object.setPrototypeOf(projectParsed, Project.prototype);
-  projectArr.push(projectParsed);  
-  localStorage.clear();
-  }
+  const projectArrJsonString = localStorage.getItem('projectArrStored');
+  const projectArrParsed = JSON.parse(projectArrJsonString);
 
-  for (let i=0; i< projectArr.length; i++) {
+  projectArrParsed.forEach(element => {
+    Object.setPrototypeOf(element, Project.prototype);
+  });
+  
+
+  for (let i=0; i< projectArrParsed.length; i++) {
     let currentProject = document.createElement('div');
     let currentProjectName = document.createElement('p');
     let currentProjectDescription = document.createElement('p');
-    currentProjectName.innerText = projectArr[i].name;
-    currentProjectDescription.innerText = projectArr[i].description;
+    currentProjectName.innerText = projectArrParsed[i].name;
+    currentProjectDescription.innerText = projectArrParsed[i].description;
     currentProject.setAttribute('data-id', i);
     currentProject.appendChild(currentProjectName);
     currentProject.appendChild(currentProjectDescription);

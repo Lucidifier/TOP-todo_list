@@ -10,7 +10,6 @@ function removeSelectedProject() {
       // console.log(projectArr);
     }
   })
-  resetProjects();
   renderProjectsModule();
 }
 
