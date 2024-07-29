@@ -12,6 +12,8 @@ function renderCurrentProject() {
   projectArrParsed.forEach(element => {
     Object.setPrototypeOf(element, Project.prototype);
   });
+  console.log('PARSED ARR!!');
+  console.log(projectArrParsed);
   
 
   for (let i=0; i< projectArrParsed.length; i++) {

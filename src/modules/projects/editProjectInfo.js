@@ -52,10 +52,14 @@ function editProjectInfo() {
           elem.setProjectName(projectNameInput.value);
           elem.setDescription(projectDescriptionInput.value);
         
-        renderProjectsModule();
-      })
-    }
-  })
+          const projectArrJson = JSON.stringify(projectArr);
+          localStorage.setItem('projectArrStored', projectArrJson); 
+          
+          renderProjectsModule();
+        })
+      }
+    })
+    
 }
 
 export default editProjectInfo;

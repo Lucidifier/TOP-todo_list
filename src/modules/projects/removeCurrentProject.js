@@ -10,6 +10,10 @@ function removeSelectedProject() {
       // console.log(projectArr);
     }
   })
+
+  const projectArrJson = JSON.stringify(projectArr);
+  localStorage.setItem('projectArrStored', projectArrJson); 
+  
   renderProjectsModule();
 }
 
