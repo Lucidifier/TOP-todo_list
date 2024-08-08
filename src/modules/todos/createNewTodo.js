@@ -5,6 +5,8 @@ import resetProjects from "../projects/resetProjectsStatus";
 import renderProjectsModule from "../projects/renderProjectsModule";
 
 function createNewTodo() {
+  console.log('create new todo');
+  console.log(projectArr);
   const todoTitle = document.querySelector('.new_todo_form > input:nth-child(2)');
   const todoDescription = document.querySelector('.new_todo_form > input:nth-child(4)');
   const todoDueDate = document.querySelector('.new_todo_form > input:nth-child(6)');
@@ -21,10 +23,14 @@ function createNewTodo() {
   projectArr.forEach(elem => {
     if(elem.selected === 1) {
       elem.listArray.push(newTodo);
+      console.log('todo added');
+      console.log(projectArr);
     }
   })
 
-  console.log(projectArr);
+  const projectArrJson = JSON.stringify(projectArr);
+  localStorage.setItem('projectArrStored', projectArrJson); 
+  
   renderTodosModule();
   renderProjectsModule();
 

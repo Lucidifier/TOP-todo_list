@@ -8,6 +8,8 @@ import { projectArrParsed } from "./renderCurrentProject";
 import removeSelectedProject from "./removeCurrentProject";
 import resetProjects from "./resetProjectsStatus";
 import editProjectInfo from "./editProjectInfo";
+import renderTodosList from "./renderTodosList";
+import renderUpdatedTodosList from "./renderUpdatedTodosList";
 
 function addEventListeners() {
   const addNew = document.querySelector('.projects_section_content > div:last-child > div:nth-child(1)');
@@ -22,6 +24,7 @@ function addEventListeners() {
       let dataValue = this.dataset.id;
       projectArr[dataValue].selected = 1;
       node.setAttribute('class', 'project_selected');
+      renderUpdatedTodosList();
       console.log(projectArr);
     })
   })
