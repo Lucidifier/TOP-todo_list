@@ -2,6 +2,7 @@ import renderProjectsModule from './renderProjectsModule.js';
 import { Project, projectArr } from './project.js';
 
 function createNewProject() {
+  console.log('CREATE NEW PROJECT');
   const nameInput = document.querySelector('.projects_section_content > form >input:nth-child(2)');
   const nameValue = nameInput.value;
 
@@ -9,11 +10,8 @@ function createNewProject() {
   const descriptionValue = descriptionInput.value;
 
   const createdProject = new Project(nameValue, descriptionValue);
-  console.log(createdProject);
-
+  
   projectArr.push(createdProject);
-  console.log(projectArr);
-
   
   const projectArrJson = JSON.stringify(projectArr);
   localStorage.setItem('projectArrStored', projectArrJson); 

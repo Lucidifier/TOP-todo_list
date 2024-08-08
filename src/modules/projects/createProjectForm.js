@@ -2,6 +2,8 @@ import createNewProject from "./projectFromButton";
 
 function addProjectInfo() {
   //clear projects module 
+
+  console.log('createProjectForm');
   const projectsModuleContent = document.querySelector('.projects_section_content');
   while (projectsModuleContent.firstChild) {
     projectsModuleContent.removeChild(projectsModuleContent.firstChild);

@@ -8,6 +8,10 @@ function addNewProject() {
   newProject.description = 'This is Project1';
   projectArr.splice(0,1);
   projectArr.push(newProject);
+
+  const projectArrJson = JSON.stringify(projectArr);
+  localStorage.setItem('projectArrStored', projectArrJson); 
+  
   renderProjectsModule();
 }
 

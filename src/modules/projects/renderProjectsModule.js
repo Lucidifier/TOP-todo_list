@@ -8,7 +8,8 @@ import createDefaultProject from "./createDefaultProject";
 
 function renderProjectsModule() {
   console.log('renderProjectsModule');
-  console.log(projectArr);
+  console.log(localStorage);
+  // console.log(projectArr);
   const projectsModuleContent = document.querySelector('.projects_section_content');
   while (projectsModuleContent.firstChild) {
     projectsModuleContent.removeChild(projectsModuleContent.firstChild);

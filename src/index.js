@@ -7,7 +7,6 @@ import renderProjectsModule from './modules/projects/renderProjectsModule.js';
 import addEventListeners from './modules/projects/eventListeners.js';
 import renderTodosModule from './modules/todos/renderTodosModule.js';
 
-createDefaultProject();
 renderProjectsModule();
 renderTodosModule();
 // addEventListeners();

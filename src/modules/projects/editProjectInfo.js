@@ -1,7 +1,10 @@
 import { projectArr } from "./project";
 import renderProjectsModule from "./renderProjectsModule";
+import { projectArrParsed } from "./renderCurrentProject";
 
 function editProjectInfo() {
+
+  console.log('editProjectInfo');
   projectArr.forEach(elem => {
     if(elem.selected === 1) {
 
@@ -30,8 +33,6 @@ function editProjectInfo() {
       projectDescriptionInput.id = 'projectDescription';
       projectDescriptionInput.name = 'projectDescription';
 
- 
-      // projectNameInput.innerText = elem.name;
       projectNameInput.value = elem.name;
       projectDescriptionInput.value = elem.description;
 
