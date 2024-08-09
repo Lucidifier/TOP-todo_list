@@ -9,6 +9,8 @@
 
 .projects_section_content > div:nth-child(1) {
   flex: 1 1 30%;
+  display: flex;
+  gap: 50px;
 }
 
 .projects_section_content > div:nth-child(2) {

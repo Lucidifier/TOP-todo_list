@@ -8,20 +8,27 @@ function renderUpdatedTodosList() {
 projectArr.forEach(function(elem) {
   if(elem.selected === 1) {
     todosList.innerText = '';
-    elem.listArray.forEach(function(elem) {
-      const todo = document.createElement('div');
-      const todoTitle = document.createElement('p');
-      const todoDescription = document.createElement('p');
+    let todosArray = elem.listArray;
+    if(elem.listArray.length !== 0) {
+      elem.listArray.forEach(function(elem) {
+        let elemIndex = todosArray.indexOf(elem);
+        console.log(elemIndex);
+        let todo = document.createElement('div');
+        let todoTitle = document.createElement('p');
+        let todoDescription = document.createElement('p');
       
-      todoTitle.innerText = elem.title;
-      todoDescription.innerText = elem.description;
+        todoTitle.innerText = elem.title;
+        todoDescription.innerText = elem.description;
+
+        todo.setAttribute('data-id', elemIndex);
     
-      todo.append(todoTitle, todoDescription);
+        todo.append(todoTitle, todoDescription);
       
-      todosList.appendChild(todo);
-      console.log('succ');
-    })
-    } else {todosList.innerText = 'no todosXD';}
+        todosList.appendChild(todo);
+        console.log('succ');
+        })
+      } else {todosList.innerText = 'no todos to showxd';}
+    }
   }) 
 }
 

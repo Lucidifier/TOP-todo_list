@@ -5,6 +5,7 @@ import addEventListeners from "./eventListeners";
 import { projectArr } from "./project";
 import resetProjects from "./resetProjectsStatus";
 import createDefaultProject from "./createDefaultProject";
+import renderUpdatedTodosList from "./renderUpdatedTodosList";
 
 function renderProjectsModule() {
   console.log('renderProjectsModule');
