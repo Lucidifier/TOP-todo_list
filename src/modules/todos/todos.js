@@ -5,6 +5,7 @@ class Todo {
     this.dueDate = dueDate;
     this.priority = priority;
     this.status = false;
+    this.selected = 0;
   }
 
   setTitle(newTitle) {

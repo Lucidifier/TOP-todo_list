@@ -2,8 +2,6 @@ import { Project, projectArr } from "./project";
 
 
 function renderCurrentProject() {
-  console.log('renderCurrentProjects');
-  console.log(projectArr);
   const projectsModuleContent = document.querySelector('.projects_section_content');
   const projectsModuleCurrentProjects = document.createElement('div');
   

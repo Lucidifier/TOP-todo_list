@@ -21,6 +21,7 @@ function addTodosEventListeners() {
       })
     })
   })
+  console.log('CHECK ARRAY AFTER CREATING NEW TODO', projectArr);
 }
 
 export default addTodosEventListeners;

@@ -8,9 +8,6 @@ import createDefaultProject from "./createDefaultProject";
 import renderUpdatedTodosList from "./renderUpdatedTodosList";
 
 function renderProjectsModule() {
-  console.log('renderProjectsModule');
-  console.log(localStorage);
-  // console.log(projectArr);
   const projectsModuleContent = document.querySelector('.projects_section_content');
   while (projectsModuleContent.firstChild) {
     projectsModuleContent.removeChild(projectsModuleContent.firstChild);

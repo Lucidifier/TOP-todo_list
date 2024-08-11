@@ -12,7 +12,6 @@ projectArr.forEach(function(elem) {
     if(elem.listArray.length !== 0) {
       elem.listArray.forEach(function(elem) {
         let elemIndex = todosArray.indexOf(elem);
-        console.log(elemIndex);
         let todo = document.createElement('div');
         let todoTitle = document.createElement('p');
         let todoDescription = document.createElement('p');
@@ -25,7 +24,6 @@ projectArr.forEach(function(elem) {
         todo.append(todoTitle, todoDescription);
       
         todosList.appendChild(todo);
-        console.log('succ');
         })
       } else {todosList.innerText = 'no todos to showxd';}
     }

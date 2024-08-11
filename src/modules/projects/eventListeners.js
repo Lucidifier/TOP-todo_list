@@ -30,17 +30,11 @@ function addEventListeners() {
       resetProjects();
       let dataValue = this.dataset.id;
       projectArr[dataValue].selected = 1;
-      console.log('check if selected');
-      console.log(projectArr);
       node.setAttribute('class', 'project_selected');
       renderUpdatedTodosList();
       addTodosEventListeners();
-      console.log(projectArr);
     })
   })
-
-  
-
 }
 
 export default addEventListeners;

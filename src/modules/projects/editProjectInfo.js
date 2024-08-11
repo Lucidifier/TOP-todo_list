@@ -3,8 +3,6 @@ import renderProjectsModule from "./renderProjectsModule";
 import { projectArrParsed } from "./renderCurrentProject";
 
 function editProjectInfo() {
-
-  console.log('editProjectInfo');
   projectArr.forEach(elem => {
     if(elem.selected === 1) {
 
