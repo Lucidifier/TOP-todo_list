@@ -13,7 +13,6 @@ function deleteTodo() {
           const projectArrJson = JSON.stringify(projectArr);
           localStorage.setItem('projectArrStored', projectArrJson); 
         }
-        
       }
     }
   }
