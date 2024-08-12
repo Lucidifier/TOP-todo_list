@@ -12,6 +12,7 @@ import renderTodosList from "./renderTodosList";
 import renderUpdatedTodosList from "./renderUpdatedTodosList";
 import resetTodosStatus from "./resetTodosStatus";
 import addTodosEventListeners from "./todosEventListeners";
+import renderTodosModule from "../todos/renderTodosModule";
 
 function addEventListeners() {
   
@@ -31,8 +32,10 @@ function addEventListeners() {
       let dataValue = this.dataset.id;
       projectArr[dataValue].selected = 1;
       node.setAttribute('class', 'project_selected');
+      resetTodosStatus();
       renderUpdatedTodosList();
       addTodosEventListeners();
+      renderTodosModule();
     })
   })
 }

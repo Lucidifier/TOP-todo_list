@@ -2,6 +2,7 @@ import {projectArr, Project} from './project.js'
 import renderProjectsModule from './renderProjectsModule.js';
 import renderProjectFunctionality from './renderProjectFunctionality.js';
 
+
 function addNewProject() {
   const newProject = new Project();
   newProject.name = 'Project1';

@@ -11,7 +11,7 @@ function renderTodoDetails() {
   for(const elem of projectArr) {
     if(elem.selected === 1) {
       for(const element of elem.listArray) {
-        if(element.selected === 1 && elem.listArray.length > 1) {
+        if(element.selected === 1 && elem.listArray.length > 0) {
 
           todosModuleContent.removeChild(todosModuleContent.firstChild);
 

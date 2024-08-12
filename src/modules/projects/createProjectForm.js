@@ -1,6 +1,10 @@
 import createNewProject from "./projectFromButton";
+import resetTodosStatus from "./resetTodosStatus";
+import renderTodosModule from "../todos/renderTodosModule";
 
 function addProjectInfo() {
+  resetTodosStatus();
+  renderTodosModule();
   //clear projects module 
   const projectsModuleContent = document.querySelector('.projects_section_content');
   while (projectsModuleContent.firstChild) {

@@ -1,8 +1,13 @@
 import { projectArr } from "./project";
 import renderProjectsModule from "./renderProjectsModule";
 import { projectArrParsed } from "./renderCurrentProject";
+import resetTodosStatus from "./resetTodosStatus";
+import renderTodosModule from "../todos/renderTodosModule";
 
 function editProjectInfo() {
+  resetTodosStatus();
+  renderTodosModule();
+  
   projectArr.forEach(elem => {
     if(elem.selected === 1) {
 
