@@ -1,6 +1,7 @@
 import renderTodoDetails from "./renderTodoDetails";
 import renderTodosFunctionality from "./renderTodosFunctionality";
 import createEventListeners from "./eventListeners";
+import renderEmptyTodoDetails from "./renderEmptyTodoDetails";
 
 function renderTodosModule() {
   const todosModuleContent = document.querySelector('.todos_section_content');
@@ -8,7 +9,7 @@ function renderTodosModule() {
     todosModuleContent.removeChild(todosModuleContent.firstChild);
   };
 
-  renderTodoDetails();
+  renderEmptyTodoDetails();
   renderTodosFunctionality();
   createEventListeners();
 }

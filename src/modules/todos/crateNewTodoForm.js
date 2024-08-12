@@ -2,7 +2,7 @@ import createNewTodo from "./createNewTodo";
 
 function createNewTodoForm() {
   //clear todo details section
-  const todoDetailsSection = document.querySelector('.todos_section_content > div:first-child');
+  const todoDetailsSection = document.querySelector('.todos_section_content');
   while (todoDetailsSection.firstChild) {
     todoDetailsSection.removeChild(todoDetailsSection.firstChild);
   };

@@ -1,5 +1,6 @@
 import { projectArr } from "./project";
 import resetTodosStatus from "./resetTodosStatus";
+import renderTodoDetails from "../todos/renderTodoDetails";
 
 //ADD EVENT LISTENERS TO EACH TODO IN TODOS LIST
 function addTodosEventListeners() {
@@ -17,6 +18,7 @@ function addTodosEventListeners() {
         elem.listArray[dataValue].selected = 1;
         console.log('selection activated!'); 
         console.log(elem.listArray);
+        renderTodoDetails();
         } else { console.log('errorito!'); }
       })
     })
