@@ -6,7 +6,9 @@ import createDefaultProject from './modules/projects/createDefaultProject.js';
 import renderProjectsModule from './modules/projects/renderProjectsModule.js';
 import addEventListeners from './modules/projects/eventListeners.js';
 import renderTodosModule from './modules/todos/renderTodosModule.js';
+import renderSidebarModule from './modules/sidebar/renderSidebarModule.js';
 
 renderProjectsModule();
 renderTodosModule();
+renderSidebarModule();
 // addEventListeners();
