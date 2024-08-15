@@ -3,6 +3,7 @@ import renderProjectsModule from "./renderProjectsModule";
 import { projectArrParsed } from "./renderCurrentProject";
 import resetTodosStatus from "./resetTodosStatus";
 import renderTodosModule from "../todos/renderTodosModule";
+import renderSidebarModule from "../sidebar/renderSidebarModule";
 
 function editProjectInfo() {
   resetTodosStatus();
@@ -60,6 +61,7 @@ function editProjectInfo() {
           localStorage.setItem('projectArrStored', projectArrJson); 
           
           renderProjectsModule();
+          renderSidebarModule();
         })
       }
     })

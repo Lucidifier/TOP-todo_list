@@ -2,6 +2,7 @@ import { projectArr } from "../projects/project";
 import Todo from "./todos";
 import renderProjectsModule from "../projects/renderProjectsModule";
 import renderTodosModule from "./renderTodosModule";
+import renderSidebarModule from "../sidebar/renderSidebarModule";
  
 
 function editTodo() {
@@ -31,6 +32,7 @@ function editTodo() {
 
   renderProjectsModule();
   renderTodosModule();
+  renderSidebarModule();
 }
 
 export default editTodo;

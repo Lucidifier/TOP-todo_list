@@ -3,6 +3,7 @@ import { projectArr } from "../projects/project";
 import renderTodosModule from "./renderTodosModule";
 import resetProjects from "../projects/resetProjectsStatus";
 import renderProjectsModule from "../projects/renderProjectsModule";
+import renderSidebarModule from "../sidebar/renderSidebarModule";
 
 function createNewTodo() {
   const todoTitle = document.querySelector('.new_todo_form > input:nth-child(2)');
@@ -27,6 +28,7 @@ function createNewTodo() {
   
   renderTodosModule();
   renderProjectsModule();
+  renderSidebarModule();
  
 }
 

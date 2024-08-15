@@ -4,6 +4,7 @@ import resetProjects from "./resetProjectsStatus";
 import { projectArrParsed } from "./renderCurrentProject";
 import resetTodosStatus from "./resetTodosStatus";
 import renderTodosModule from "../todos/renderTodosModule";
+import renderSidebarModule from "../sidebar/renderSidebarModule";
 
 function removeSelectedProject() {
   resetTodosStatus();
@@ -26,6 +27,7 @@ function removeSelectedProject() {
   }
 
   renderProjectsModule();
+  renderSidebarModule();
 }
 
 export default removeSelectedProject;

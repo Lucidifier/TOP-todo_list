@@ -1,4 +1,6 @@
 import renderProjectsModule from './renderProjectsModule.js';
+import renderSidebarModule from "../sidebar/renderSidebarModule";
+
 import { Project, projectArr } from './project.js';
 
 function createNewProject() {
@@ -16,6 +18,7 @@ function createNewProject() {
   localStorage.setItem('projectArrStored', projectArrJson); 
 
   renderProjectsModule();
+  renderSidebarModule();
 }
 
 export default createNewProject;
