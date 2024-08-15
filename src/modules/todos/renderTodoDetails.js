@@ -1,4 +1,5 @@
 import { projectArr } from "../projects/project";
+import { format } from "date-fns";
 import renderTodosFunctionality from "./renderTodosFunctionality";
 
 function renderTodoDetails() {
@@ -24,7 +25,10 @@ function renderTodoDetails() {
 
           currentTodoTitle.innerText = element.title;
           currentTodoDescription.innerText = element.description;
-          currentTodoDueDate.innerText = element.dueDate;
+          console.log('SHOW DATE',element.dueDate);
+          const formatedDate = format(element.dueDate, 'dd/MMM/y');
+          console.log('SHOW FORMATED DATE',formatedDate);
+          currentTodoDueDate.innerText = formatedDate;
           currentTodoPriority.innerText = element.priority;
           currentTodo.append(currentTodoTitle, currentTodoDescription, currentTodoDueDate, currentTodoPriority);
           todoDetails.appendChild(currentTodo);

@@ -1,4 +1,5 @@
 import { projectArr } from "../projects/project";
+import { formatDistanceToNow } from "date-fns";
 
 function renderSidebarModule() {
   console.log('sidebar rendered');
@@ -20,7 +21,11 @@ function renderSidebarModule() {
       const sidebarProjectTodoTitle = document.createElement('p');
       sidebarProjectTodoTitle.classList.add('sidebar_todo_title')
       sidebarProjectTodoTitle.innerText = element.title;
-      sidebarProjectTitle.appendChild(sidebarProjectTodoTitle);
+      const sidebarProjectTodoDateCountdown = document.createElement('p');
+      const timeBetweenNowAndDueDate = formatDistanceToNow(element.dueDate);
+      sidebarProjectTodoDateCountdown.innerText = `Due in: ${timeBetweenNowAndDueDate}`;
+
+      sidebarProjectTitle.append(sidebarProjectTodoTitle, sidebarProjectTodoDateCountdown);
     }
     sidebarProjectDiv.appendChild(sidebarProjectTitle);
     sidebarModuleContent.appendChild(sidebarProjectDiv);
