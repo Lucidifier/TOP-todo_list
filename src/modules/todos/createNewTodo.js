@@ -4,6 +4,7 @@ import renderTodosModule from "./renderTodosModule";
 import resetProjects from "../projects/resetProjectsStatus";
 import renderProjectsModule from "../projects/renderProjectsModule";
 import renderSidebarModule from "../sidebar/renderSidebarModule";
+import sortBasedOnPriority from "./sortTodoArray";
 
 function createNewTodo() {
   const todoTitle = document.querySelector('.new_todo_form > input:nth-child(2)');
@@ -27,7 +28,8 @@ function createNewTodo() {
 
   const projectArrJson = JSON.stringify(projectArr);
   localStorage.setItem('projectArrStored', projectArrJson); 
-  
+
+  sortBasedOnPriority();
   renderTodosModule();
   renderProjectsModule();
   renderSidebarModule();

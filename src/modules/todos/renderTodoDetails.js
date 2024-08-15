@@ -29,7 +29,19 @@ function renderTodoDetails() {
           const formatedDate = format(element.dueDate, 'dd/MMM/y');
           console.log('SHOW FORMATED DATE',formatedDate);
           currentTodoDueDate.innerText = formatedDate;
-          currentTodoPriority.innerText = element.priority;
+
+          switch (element.priority) {
+            case 3:
+              currentTodoPriority.innerText = 'High';
+              break;
+            case 2:
+              currentTodoPriority.innerText = 'Medium';
+              break;
+            case 1:
+              currentTodoPriority.innerText = 'Low';
+              break;
+          }
+          
           currentTodo.append(currentTodoTitle, currentTodoDescription, currentTodoDueDate, currentTodoPriority);
           todoDetails.appendChild(currentTodo);
           todosModuleContent.insertBefore(todoDetails, todosModuleContent.firstChild);

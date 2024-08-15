@@ -3,6 +3,7 @@ import Todo from "./todos";
 import renderProjectsModule from "../projects/renderProjectsModule";
 import renderTodosModule from "./renderTodosModule";
 import renderSidebarModule from "../sidebar/renderSidebarModule";
+import sortBasedOnPriority from "./sortTodoArray";
  
 
 function editTodo() {
@@ -30,7 +31,7 @@ function editTodo() {
       }
     }
   }
-
+  sortBasedOnPriority();
   renderProjectsModule();
   renderTodosModule();
   renderSidebarModule();

@@ -18,7 +18,13 @@ class Todo {
     this.dueDate = newDate;
   }
   setPriority(newPriority) {
-    this.priority = newPriority;
+    if(newPriority === 'High') {
+      this.priority = 3;
+    } else if(newPriority === 'Medium') {
+      this.priority = 2;
+    } else {
+      this.priority = 1;
+    }
   }
   setStatus() {
     if(this.status === false) {

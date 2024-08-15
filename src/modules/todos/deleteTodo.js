@@ -2,6 +2,7 @@ import { projectArr } from "../projects/project";
 import renderProjectsModule from "../projects/renderProjectsModule";
 import renderTodosModule from "./renderTodosModule";
 import renderSidebarModule from "../sidebar/renderSidebarModule";
+import sortBasedOnPriority from "./sortTodoArray";
 
 function deleteTodo() {
   //forEach LOOP DOESNT WORK FOR WHATEVER REASON, listArray shows empty array
@@ -17,6 +18,7 @@ function deleteTodo() {
       }
     }
   }
+  sortBasedOnPriority();
   renderProjectsModule();
   renderTodosModule();
   renderSidebarModule();
