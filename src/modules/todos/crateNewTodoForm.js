@@ -14,8 +14,17 @@ function createNewTodoForm() {
   const todoDescriptionInput = document.createElement('input');
   const todoDueDateLabel = document.createElement('label');
   const todoDueDateInput = document.createElement('input');
-  const todoPriorityLabel = document.createElement('label');
-  const todoPriorityInput = document.createElement('input');
+
+  //priority selection
+  const todoPriorityFieldset = document.createElement('fieldset');
+  const todoPriorityLegend = document.createElement('legend');
+  const todoPriorityHighLabel = document.createElement('label');
+  const todoPriorityHighInput = document.createElement('input');
+  const todoPriorityMediumLabel = document.createElement('label');
+  const todoPriorityMediumInput = document.createElement('input');
+  const todoPriorityLowLabel = document.createElement('label');
+  const todoPriorityLowInput = document.createElement('input');
+
   const todoAddButton = document.createElement('button');
 
   newTodoForm.setAttribute('class', 'new_todo_form');
@@ -34,20 +43,40 @@ function createNewTodoForm() {
 
   todoDueDateLabel.innerText = 'Due Date: ';
   todoDueDateLabel.setAttribute('for', 'todoDueDate');
-  todoDueDateInput.type = 'text';
+  todoDueDateInput.type = 'date';
   todoDueDateInput.id = 'todoDueDate';
   todoDueDateInput.name = 'todoDueDate';
 
-  todoPriorityLabel.innerText = 'Priority: ';
-  todoPriorityLabel.setAttribute('for', 'todoPriority');
-  todoPriorityInput.type = 'text';
-  todoPriorityInput.id = 'todoPriority';
-  todoPriorityInput.name = 'todoPriority';
+  todoPriorityLegend.innerText = 'Select task priority'
+
+  todoPriorityHighLabel.innerText = 'High';
+  todoPriorityHighLabel.setAttribute('for', 'todoHighPriority');
+  todoPriorityHighInput.type = 'radio';
+  todoPriorityHighInput.id = 'todoHighPriority';
+  todoPriorityHighInput.name = 'todoPriority';
+  todoPriorityHighInput.value = 'High';
+
+  todoPriorityMediumLabel.innerText = 'Medium';
+  todoPriorityMediumLabel.setAttribute('for', 'todoMediumPriority');
+  todoPriorityMediumInput.type = 'radio';
+  todoPriorityMediumInput.id = 'todoMediumPriority';
+  todoPriorityMediumInput.name = 'todoPriority';
+  todoPriorityMediumInput.value = 'Medium';
+
+  todoPriorityLowLabel.innerText = 'Low';
+  todoPriorityLowLabel.setAttribute('for', 'todoLowPriority');
+  todoPriorityLowInput.type = 'radio';
+  todoPriorityLowInput.id = 'todoLowPriority';
+  todoPriorityLowInput.name = 'todoPriority';
+  todoPriorityLowInput.value = 'Low';
 
   todoAddButton.innerText = '+';
 
+  todoPriorityFieldset.append(todoPriorityLegend, todoPriorityHighInput, todoPriorityHighLabel, todoPriorityMediumInput, todoPriorityMediumLabel,
+    todoPriorityLowInput, todoPriorityLowLabel);
+
   newTodoForm.append(todoTitleLabel, todoTitleInput, todoDescriptionLabel, todoDescriptionInput, 
-    todoDueDateLabel, todoDueDateInput, todoPriorityLabel, todoPriorityInput, todoAddButton);
+    todoDueDateLabel, todoDueDateInput, todoPriorityFieldset,  todoAddButton);
 
   todoDetailsSection.appendChild(newTodoForm);
 

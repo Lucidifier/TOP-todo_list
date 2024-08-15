@@ -18,6 +18,7 @@ function renderSidebarModule() {
     for(let element of elem.listArray) {
       console.log('XD',element);
       const sidebarProjectTodoTitle = document.createElement('p');
+      sidebarProjectTodoTitle.classList.add('sidebar_todo_title')
       sidebarProjectTodoTitle.innerText = element.title;
       sidebarProjectTitle.appendChild(sidebarProjectTodoTitle);
     }

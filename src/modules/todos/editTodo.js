@@ -10,7 +10,7 @@ function editTodo() {
   const todoTitle = document.querySelector('.new_todo_form > input:nth-child(2)');
   const todoDescription = document.querySelector('.new_todo_form > input:nth-child(4)');
   const todoDueDate = document.querySelector('.new_todo_form > input:nth-child(6)');
-  const todoPriority = document.querySelector('.new_todo_form > input:nth-child(8)');
+  const todoPriority = document.querySelector('input[name="todoPriority"]:checked');
 
   for(const elem of projectArr) {
     if(elem.selected === 1) {
