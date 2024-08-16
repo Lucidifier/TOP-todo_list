@@ -1,5 +1,6 @@
 import { projectArr } from "../projects/project";
 import { format } from "date-fns";
+import changeStatusCheckbox from "./statusCheckboxFunctionality";
 import renderTodosFunctionality from "./renderTodosFunctionality";
 
 function renderTodoDetails() {
@@ -21,6 +22,9 @@ function renderTodoDetails() {
           let currentTodoDescription = document.createElement('p');
           let currentTodoDueDate = document.createElement('p');
           let currentTodoPriority = document.createElement('p');
+          let currentTodoStatusLabel = document.createElement('label')
+          let currentTodoStatusCheckbox = document.createElement('input');
+
           // console.log(projectsModuleTodosListIfRendered.classList)
 
           currentTodoTitle.innerText = element.title;
@@ -41,8 +45,22 @@ function renderTodoDetails() {
               currentTodoPriority.innerText = 'Low';
               break;
           }
+
+          currentTodoStatusCheckbox.type = 'checkbox';
+          currentTodoStatusCheckbox.name = 'statusCheckbox';
+          currentTodoStatusCheckbox.id = 'statusCheckbox';
+          currentTodoStatusLabel.for = 'statusCheckbox';
+          currentTodoStatusLabel.innerText = 'Task complete';
+
+          if(element.status === true) {
+            currentTodoStatusCheckbox.checked = false;
+          } else {
+            currentTodoStatusCheckbox.checked = true;
+          };
+
+          currentTodoStatusCheckbox.addEventListener('change', changeStatusCheckbox);
           
-          currentTodo.append(currentTodoTitle, currentTodoDescription, currentTodoDueDate, currentTodoPriority);
+          currentTodo.append(currentTodoTitle, currentTodoDescription, currentTodoDueDate, currentTodoPriority, currentTodoStatusLabel, currentTodoStatusCheckbox);
           todoDetails.appendChild(currentTodo);
           todosModuleContent.insertBefore(todoDetails, todosModuleContent.firstChild);
           console.log('DETAILS CREATION COMPLETE.');

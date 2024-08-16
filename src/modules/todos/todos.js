@@ -4,7 +4,7 @@ class Todo {
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
-    this.status = false;
+    this.status = true;
     this.selected = 0;
   }
 
@@ -27,10 +27,10 @@ class Todo {
     }
   }
   setStatus() {
-    if(this.status === false) {
-      this.status = true;
-    } else {
+    if(this.status === true) {
       this.status = false;
+    } else {
+      this.status = true;
     }
   }
 }
