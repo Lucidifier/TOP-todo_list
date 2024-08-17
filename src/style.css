@@ -22,16 +22,50 @@ img {
   height: auto;
 }
 
+:root {
+  --first_color: #E23E57;
+  --second_color: #88304E;
+  --third_color: #522546;
+  --fourth_color: #311D3F;
+
+  --big_font: 5em;
+  --medium_font: 3em;
+  --small_font: 2em;
+  --button_font: 1.5em;
+}
+
+@font-face {
+  font-family: 'main-font';
+  src: url('./fonts/F25_Bank_Printer.otf');
+}
+
+@font-face {
+  font-family: 'title-font';
+  src: url('./fonts/space\ age.ttf');
+}
+
+@font-face {
+  font-family: 'description-font';
+  src: url('./fonts/F25_Bank_Printer.otf');
+}
+
 body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr 1fr;
+  justify-items: center;
+  gap: 2em;
   width: 100%;
   height: 100vh;
+  background-color: var(--first_color);
+  font-family: 'main-font', monospace;
 }
 
 header {
   grid-row: 1/2;
+  color: var(--third_color);
+  font-size: var(--big_font);
+  font-family: 'title-font', monospace;
 }
 
 main {
@@ -39,27 +73,39 @@ main {
   display: grid;
   grid-column: 1fr 1fr 1fr;
   grid-row: 1fr 1fr;
+  gap: 1em 2em;
+  width: 60%;
+  font-family: 'main-font', monospace;
 }
 
 .sidebar_section {
   grid-column: 1/2;
   grid-row: 1/3;
   border: 1px solid blue;
+  background-color: var(--second_color);
+  border: 7px solid var(--third_color);
+  border-radius: 10px;
 }
 
 .todos_section {
   grid-column: 2/4;
   grid-row: 1/2;
   border: 1px solid green;
+  background-color: var(--second_color);
+  border: 7px solid var(--third_color);
+  border-radius: 10px;
 }
 
 .projects_section {
   grid-column: 2/4;
   grid-row: 2/3;
   border: 1px solid orange;
+  background-color: var(--second_color);
+  border: 7px solid var(--third_color);
+  border-radius: 10px;
 }
 
 footer {
   grid-column: 1/3;
-  grid-row: 9/10; 
+  grid-row: 3/4; 
 }
