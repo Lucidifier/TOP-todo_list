@@ -80,6 +80,14 @@ function editTodoForm() {
   todoPriorityLowInput.id = 'todoLowPriority';
   todoPriorityLowInput.name = 'todoPriority';
   todoPriorityLowInput.value = 'Low';
+          
+          if(element.priority == 1) {
+            todoPriorityLowInput.checked = true;
+          } else if(element.priority == 2) {
+            todoPriorityMediumInput.checked = true;
+          } else {
+            todoPriorityHighInput.checked = true;
+          }
         
           todoAddButton.innerText = '+';
 

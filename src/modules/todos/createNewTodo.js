@@ -11,8 +11,6 @@ function createNewTodo() {
   const todoDescription = document.querySelector('.new_todo_form > input:nth-child(4)');
   const todoDueDate = document.querySelector('.new_todo_form > input:nth-child(6)');
   const todoPriority = document.querySelector('input[name="todoPriority"]:checked');
-  console.log(todoPriority);
-
 
   const newTodo = new Todo();
   newTodo.setTitle(todoTitle.value);

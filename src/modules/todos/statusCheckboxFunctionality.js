@@ -1,8 +1,10 @@
 import { projectArr } from "../projects/project";
 import Todo from "./todos";
+import renderSidebarModule from "../sidebar/renderSidebarModule.js";
+import renderCurrentProject from "../projects/renderCurrentProject.js";
 
 function changeStatusCheckbox() {
-  const checkbox = document.querySelector('input[type="checkbox"]')
+  const checkbox = document.querySelector('.todos_section_content > div > div > input')
 
   for(const elem of projectArr) {
     if(elem.selected === 1) {
@@ -11,16 +13,30 @@ function changeStatusCheckbox() {
           Object.setPrototypeOf(element, Todo.prototype);
           if(checkbox.checked) {
             element.setStatus();
-            console.log(element);
+
+            const projectArrJson = JSON.stringify(projectArr);
+            localStorage.setItem('projectArrStored', projectArrJson);
+            const projectArrJsonString = localStorage.getItem('projectArrStored');
+            const projectArrParsed = JSON.parse(projectArrJsonString);
+            projectArr.splice(0, projectArr.length);
+            projectArr.push(...projectArrParsed);
+
+            renderSidebarModule();
           } else {
             element.setStatus();
-            console.log(element);
+            const projectArrJson = JSON.stringify(projectArr);
+            localStorage.setItem('projectArrStored', projectArrJson);
+            const projectArrJsonString = localStorage.getItem('projectArrStored');
+            const projectArrParsed = JSON.parse(projectArrJsonString);
+            projectArr.splice(0, projectArr.length);
+            projectArr.push(...projectArrParsed);
+
+            renderSidebarModule();
           }
         }
       }
     }
   }
-  console.log(projectArr);
 }
 
 export default changeStatusCheckbox;

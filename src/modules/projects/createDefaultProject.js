@@ -7,7 +7,6 @@ function createDefaultProject() {
 
     const projectArrJson = JSON.stringify(projectArr);
     localStorage.setItem('projectArrStored', projectArrJson); 
-    console.log('START');
   } else { console.log('NOT START')}
 }
 

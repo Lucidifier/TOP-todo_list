@@ -2,3 +2,31 @@
   margin-left: 5px;
   color: blue;
 }
+
+.sidebar_todo_div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar_project_div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar_project_div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.sidebar_project_div > div > div {
+  border: 2px solid red;
+}
+
+.sidebar_todo_div_complete {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+}
