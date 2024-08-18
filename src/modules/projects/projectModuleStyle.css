@@ -1,8 +1,24 @@
+:root {
+  --first_color: #E23E57;
+  --second_color: #88304E;
+  --third_color: #522546;
+  --fourth_color: #311D3F;
+
+  --big_font: 5em;
+  --medium_font: 3em;
+  --small_font: 1.2em;
+  --button_font: 1.5em;
+}
+
+@font-face {
+  font-family: 'description-font';
+  src: url('../../fonts/Zector.ttf');
+}
+
 .projects_section_content{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   width: 100%;
   height: 100%;
 }
@@ -11,18 +27,35 @@
   flex: 1 1 30%;
   display: flex;
   gap: 50px;
+  font-family: 'description-font',monospace;
+  font-size: var(--small_font);
 }
 
 .projects_section_content > div:nth-child(2) {
   flex: 1 1 30%;
   display: flex;
   gap: 50px;
+  font-family: 'description-font',monospace;
+  font-size: var(--small_font);
+  
 }
 
 .projects_section_content > div:nth-child(3) {
   flex: 1 1 30%;
   display: flex;
   gap: 50px;
+  border-top: 5px solid var(--fourth_color);
+  padding-top: 50px;
+}
+
+.projects_section_content > div:nth-child(3) > div {
+  border: 5px solid var(--third_color);
+  border-radius: 10px;
+  justify-self: center;
+  line-height: 40px;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .project_selected {
