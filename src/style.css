@@ -29,7 +29,7 @@ img {
 
   --big_font: 5rem;
   --medium_font: 3rem;
-  --small_font: 1.2rem;
+  --small_font: 1.1rem;
   --button_font: 1.3rem;
 }
 
@@ -62,15 +62,16 @@ body {
 
 header {
   grid-row: 1/2;
-  color: var(--third_color);
+  color: var(--fourth_color);
   font-size: var(--big_font);
   font-family: 'title-font', monospace;
+  font-weight: bolder;
 }
 
 main {
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: 350px 800px;
+  grid-template-columns: 300px 750px;
   grid-template-rows: 1fr 1fr;
   gap: 1rem 1rem;
   /* width: 60%;  */
@@ -81,7 +82,7 @@ main {
   grid-row: 1/3;
   border: 1px solid blue;
   background-color: var(--second_color);
-  border: 7px solid var(--third_color);
+  border: 7px solid var(--fourth_color);
   border-radius: 10px;
 }
 
@@ -90,7 +91,7 @@ main {
   grid-row: 1/2;
   border: 1px solid green;
   background-color: var(--second_color);
-  border: 7px solid var(--third_color);
+  border: 7px solid var(--fourth_color);
   border-radius: 10px;
 }
 
@@ -99,7 +100,7 @@ main {
   grid-row: 2/3;
   border: 1px solid orange;
   background-color: var(--second_color);
-  border: 7px solid var(--third_color);
+  border: 7px solid var(--fourth_color);
   border-radius: 10px;
 }
 

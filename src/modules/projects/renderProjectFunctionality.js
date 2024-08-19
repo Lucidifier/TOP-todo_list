@@ -5,13 +5,13 @@ function renderProjectFunctionality() {
   const removeProject = document.createElement('div');
   const editProjectInfoButton = document.createElement('div');
 
-  addNewProjectButton.innerText = 'Add Folder';
+  addNewProjectButton.innerText = 'ADD';
   projectFunctions.appendChild(addNewProjectButton);
 
-  removeProject.innerText = 'Remove Folder';
+  removeProject.innerText = 'REMOVE';
   projectFunctions.appendChild(removeProject);
 
-  editProjectInfoButton.innerText = 'Edit Folder';
+  editProjectInfoButton.innerText = 'EDIT';
   projectFunctions.appendChild(editProjectInfoButton);
 
   projectsModuleContent.appendChild(projectFunctions);

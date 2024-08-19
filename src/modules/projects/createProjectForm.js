@@ -23,12 +23,14 @@ function addProjectInfo() {
   projectNameInput.type = 'text';
   projectNameInput.id = 'projectName';
   projectNameInput.name = 'projectName';
+  projectNameInput.maxLength = 15;
 
   projectDescriptionLabel.innerText = 'Description: ';
   projectDescriptionLabel.setAttribute('for', 'projectDescription');
   projectDescriptionInput.type = 'text';
   projectDescriptionInput.id = 'projectDescription';
   projectDescriptionInput.name = 'projectDescription';
+  projectDescriptionInput.maxLength = 15;
 
   projectAddButton.innerText = '+';
 
@@ -37,6 +39,7 @@ function addProjectInfo() {
   newProjectForm.appendChild(projectDescriptionLabel);
   newProjectForm.appendChild(projectDescriptionInput);
   newProjectForm.appendChild(projectAddButton);
+  newProjectForm.classList.add('new_project_form');
 
   projectsModuleContent.appendChild(newProjectForm);
 

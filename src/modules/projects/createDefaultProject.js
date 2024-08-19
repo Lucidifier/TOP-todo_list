@@ -2,7 +2,7 @@ import {projectArr, Project} from './project.js'
 
 function createDefaultProject() {
   if(localStorage.length === 0 || localStorage[0] === 0) {
-    const newProject = new Project('Default Project', 'This is a default project');
+    const newProject = new Project('Default Project', 'Default project');
     projectArr.push(newProject);
 
     const projectArrJson = JSON.stringify(projectArr);
