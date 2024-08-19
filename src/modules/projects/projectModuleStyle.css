@@ -1,20 +1,3 @@
-:root {
-  --first_color: #E23E57;
-  --second_color: #88304E;
-  --third_color: #522546;
-  --fourth_color: #311D3F;
-
-  --big_font: 5em;
-  --medium_font: 3em;
-  --small_font: 1.2em;
-  --button_font: 1.5em;
-}
-
-@font-face {
-  font-family: 'description-font';
-  src: url('../../fonts/Zector.ttf');
-}
-
 .projects_section_content{
   display: flex;
   flex-direction: column;
@@ -27,17 +10,19 @@
   flex: 1 1 30%;
   display: flex;
   gap: 50px;
+  padding-top: 20px;
+}
+
+.new_created_project {
   font-family: 'description-font',monospace;
   font-size: var(--small_font);
+  font-weight: bold;
 }
 
 .projects_section_content > div:nth-child(2) {
   flex: 1 1 30%;
   display: flex;
   gap: 50px;
-  font-family: 'description-font',monospace;
-  font-size: var(--small_font);
-  
 }
 
 .projects_section_content > div:nth-child(3) {
@@ -45,7 +30,7 @@
   display: flex;
   gap: 50px;
   border-top: 5px solid var(--fourth_color);
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .projects_section_content > div:nth-child(3) > div {
@@ -56,10 +41,17 @@
   height: 50px;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: var(--button_font);
 }
 
 .project_selected {
-  color: red;
+  color: var(--first_color);
+}
+
+.empty_todo_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 

@@ -31,7 +31,7 @@ function addEventListeners() {
       resetProjects();
       let dataValue = this.dataset.id;
       projectArr[dataValue].selected = 1;
-      node.setAttribute('class', 'project_selected');
+      node.classList.add('project_selected', 'new_created_project');
       resetTodosStatus();
       renderUpdatedTodosList();
       addTodosEventListeners();

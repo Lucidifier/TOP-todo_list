@@ -9,7 +9,7 @@ function addTodosEventListeners() {
     node.addEventListener('click', function() {
       resetTodosStatus();
       let dataValue = this.dataset.id;
-      node.setAttribute('class', 'project_selected');
+      node.classList.add('project_selected', 'new_created_project');
       projectArr.forEach(elem => {
         if(elem.selected === 1) {
         elem.listArray[dataValue].selected = 1;

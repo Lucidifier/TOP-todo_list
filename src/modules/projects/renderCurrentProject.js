@@ -22,6 +22,7 @@ function renderCurrentProject() {
     currentProjectName.innerText = projectArr[i].name;
     currentProjectDescription.innerText = projectArr[i].description;
     currentProject.setAttribute('data-id', i);
+    currentProject.classList.add('new_created_project');
     currentProject.appendChild(currentProjectName);
     currentProject.appendChild(currentProjectDescription);
     projectsModuleCurrentProjects.appendChild(currentProject);

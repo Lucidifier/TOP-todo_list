@@ -9,6 +9,15 @@
 
 .todos_section_content > div:nth-child(1) {
   flex: 1 1 66%;
+  font-family: 'description-font', monospace;
+  font-weight: bold;
+  font-size: var(--small_font);
+}
+
+.todos_section_content > div:nth-child(1) > div >p {
+  font-family: 'description-font', monospace;
+  font-weight: bold;
+  font-size: var(--small_font);
 }
 
 .todos_section_content > div:nth-child(2) {

@@ -25,20 +25,20 @@ function renderTodoDetails() {
 
           // console.log(projectsModuleTodosListIfRendered.classList)
 
-          currentTodoTitle.innerText = element.title;
-          currentTodoDescription.innerText = element.description;
+          currentTodoTitle.innerText = `Name: ${element.title}`;
+          currentTodoDescription.innerText = `Description: ${element.description}`;
           const formatedDate = format(element.dueDate, 'dd/MMM/y');
-          currentTodoDueDate.innerText = formatedDate;
+          currentTodoDueDate.innerText = `Due Date: ${formatedDate}`;
 
           switch (element.priority) {
             case 3:
-              currentTodoPriority.innerText = 'High';
+              currentTodoPriority.innerText = 'Priority: High';
               break;
             case 2:
-              currentTodoPriority.innerText = 'Medium';
+              currentTodoPriority.innerText = 'Priority: Medium';
               break;
             case 1:
-              currentTodoPriority.innerText = 'Low';
+              currentTodoPriority.innerText = 'Priority: Low';
               break;
           }
 
