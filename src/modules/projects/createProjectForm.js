@@ -12,8 +12,10 @@ function addProjectInfo() {
   };
 
   const newProjectForm = document.createElement('form');
+  const projectNameDiv = document.createElement('div');
   const projectNameLabel = document.createElement('label');
   const projectNameInput = document.createElement('input');
+  const projectDescriptionDiv = document.createElement('div');
   const projectDescriptionLabel = document.createElement('label');
   const projectDescriptionInput = document.createElement('input');
   const projectAddButton = document.createElement('button');
@@ -24,6 +26,8 @@ function addProjectInfo() {
   projectNameInput.id = 'projectName';
   projectNameInput.name = 'projectName';
   projectNameInput.maxLength = 15;
+  projectNameDiv.append(projectNameLabel, projectNameInput);
+  projectNameDiv.classList.add('new_project_form_divs');
 
   projectDescriptionLabel.innerText = 'Description: ';
   projectDescriptionLabel.setAttribute('for', 'projectDescription');
@@ -31,14 +35,13 @@ function addProjectInfo() {
   projectDescriptionInput.id = 'projectDescription';
   projectDescriptionInput.name = 'projectDescription';
   projectDescriptionInput.maxLength = 15;
+  projectDescriptionDiv.append(projectDescriptionLabel, projectDescriptionInput);
+  projectDescriptionDiv.classList.add('new_project_form_divs');
 
-  projectAddButton.innerText = '+';
+  projectAddButton.innerText = 'Add';
 
-  newProjectForm.appendChild(projectNameLabel);
-  newProjectForm.appendChild(projectNameInput);
-  newProjectForm.appendChild(projectDescriptionLabel);
-  newProjectForm.appendChild(projectDescriptionInput);
-  newProjectForm.appendChild(projectAddButton);
+  
+  newProjectForm.append(projectNameDiv, projectDescriptionDiv, projectAddButton);
   newProjectForm.classList.add('new_project_form');
 
   projectsModuleContent.appendChild(newProjectForm);

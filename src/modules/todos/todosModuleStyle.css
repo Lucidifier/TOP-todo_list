@@ -14,7 +14,7 @@
   font-size: var(--small_font);
 }
 
-.todos_section_content > div:nth-child(1) > div >p {
+.todos_section_content > div:nth-child(1) > div > p {
   font-family: 'description-font', monospace;
   font-weight: bold;
   font-size: var(--small_font);

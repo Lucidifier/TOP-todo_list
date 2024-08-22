@@ -64,8 +64,45 @@
 .new_project_form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  font-family: var(--small_font), monospace;
+  gap: 30px;
+  font-family: 'description_font', monospace;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.new_project_form_divs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+  border: 4px solid var(--fourth_color);
+  border-radius: 5px;
+  background: var(--first_color);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--third_color);
+  font-weight: bold;
+}
+
+.new_project_form > button {
+  padding: 5px;
+  border: 4px solid var(--fourth_color);
+  background: var(--first_color);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.new_project_form > button:hover {
+  background-color: var(--third_color);
 }
 
 .project_selected {
@@ -78,6 +115,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 
 
 

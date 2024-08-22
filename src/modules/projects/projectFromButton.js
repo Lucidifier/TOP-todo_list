@@ -4,10 +4,10 @@ import renderSidebarModule from "../sidebar/renderSidebarModule";
 import { Project, projectArr } from './project.js';
 
 function createNewProject() {
-  const nameInput = document.querySelector('.projects_section_content > form >input:nth-child(2)');
+  const nameInput = document.querySelector('#projectName');
   const nameValue = nameInput.value;
 
-  const descriptionInput = document.querySelector('.projects_section_content > form >input:nth-child(4)');
+  const descriptionInput = document.querySelector('#projectDescription');
   const descriptionValue = descriptionInput.value;
 
   const createdProject = new Project(nameValue, descriptionValue);
