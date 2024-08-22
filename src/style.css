@@ -72,7 +72,7 @@ main {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 300px 750px;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 350px 290px;
   gap: 1rem 1rem;
   /* width: 60%;  */
 }

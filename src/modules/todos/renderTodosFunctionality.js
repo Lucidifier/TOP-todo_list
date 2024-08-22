@@ -5,13 +5,13 @@ function renderTodosFunctionality() {
   const addButton = document.createElement('div');
   const deleteButton = document.createElement('div');
 
-  editButton.innerText = 'Edit Todo';
+  editButton.innerText = 'EDIT';
   todosFunctionality.appendChild(editButton);
 
-  addButton.innerText = 'Add Todo';
+  addButton.innerText = 'ADD';
   todosFunctionality.appendChild(addButton);
 
-  deleteButton.innerText = 'Delete Todo';
+  deleteButton.innerText = 'DELETE';
   todosFunctionality.appendChild(deleteButton);
 
   todosModuleContent.appendChild(todosFunctionality);

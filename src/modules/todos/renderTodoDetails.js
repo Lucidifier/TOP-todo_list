@@ -20,6 +20,7 @@ function renderTodoDetails() {
           let currentTodoDescription = document.createElement('p');
           let currentTodoDueDate = document.createElement('p');
           let currentTodoPriority = document.createElement('p');
+          let currentStatusDiv = document.createElement('div');
           let currentTodoStatusLabel = document.createElement('label')
           let currentTodoStatusCheckbox = document.createElement('input');
 
@@ -56,7 +57,8 @@ function renderTodoDetails() {
 
           currentTodoStatusCheckbox.addEventListener('change', changeStatusCheckbox);
           
-          currentTodo.append(currentTodoTitle, currentTodoDescription, currentTodoDueDate, currentTodoPriority, currentTodoStatusLabel, currentTodoStatusCheckbox);
+          currentStatusDiv.append(currentTodoStatusLabel, currentTodoStatusCheckbox);
+          currentTodo.append(currentTodoTitle, currentTodoDescription, currentTodoDueDate, currentTodoPriority, currentStatusDiv);
           todoDetails.appendChild(currentTodo);
           todosModuleContent.insertBefore(todoDetails, todosModuleContent.firstChild);
         }

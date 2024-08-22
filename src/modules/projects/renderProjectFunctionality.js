@@ -8,7 +8,7 @@ function renderProjectFunctionality() {
   addNewProjectButton.innerText = 'ADD';
   projectFunctions.appendChild(addNewProjectButton);
 
-  removeProject.innerText = 'REMOVE';
+  removeProject.innerText = 'DELETE';
   projectFunctions.appendChild(removeProject);
 
   editProjectInfoButton.innerText = 'EDIT';

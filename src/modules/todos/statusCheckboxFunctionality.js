@@ -4,7 +4,7 @@ import renderSidebarModule from "../sidebar/renderSidebarModule.js";
 import renderCurrentProject from "../projects/renderCurrentProject.js";
 
 function changeStatusCheckbox() {
-  const checkbox = document.querySelector('.todos_section_content > div > div > input')
+  const checkbox = document.querySelector('.todos_section_content > div > div > div > input')
 
   for(const elem of projectArr) {
     if(elem.selected === 1) {

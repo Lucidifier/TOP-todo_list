@@ -16,10 +16,13 @@ function editTodoForm() {
           };
         
           const newTodoForm = document.createElement('form');
+          const todoTitleDiv = document.createElement('div');
           const todoTitleLabel = document.createElement('label');
           const todoTitleInput = document.createElement('input');
+          const todoDescriptionDiv = document.createElement('div');
           const todoDescriptionLabel = document.createElement('label');
           const todoDescriptionInput = document.createElement('input');
+          const todoDueDateDiv = document.createElement('div');
           const todoDueDateLabel = document.createElement('label');
           const todoDueDateInput = document.createElement('input');
         
@@ -43,6 +46,7 @@ function editTodoForm() {
           todoTitleInput.id = 'todoTitle';
           todoTitleInput.name = 'todoTitle';
           todoTitleInput.value = element.title;
+          todoTitleDiv.append(todoTitleLabel, todoTitleInput);
         
           todoDescriptionLabel.innerText = 'Description: ';
           todoDescriptionLabel.setAttribute('for', 'todoDescription');
@@ -50,6 +54,7 @@ function editTodoForm() {
           todoDescriptionInput.id = 'todoDescription';
           todoDescriptionInput.name = 'todoDescription';
           todoDescriptionInput.value = element.description;
+          todoDescriptionDiv.append(todoDescriptionLabel, todoDescriptionInput);
         
           todoDueDateLabel.innerText = 'Due Date: ';
           todoDueDateLabel.setAttribute('for', 'todoDueDate');
@@ -57,6 +62,7 @@ function editTodoForm() {
           todoDueDateInput.id = 'todoDueDate';
           todoDueDateInput.name = 'todoDueDate';
           todoDueDateInput.value = element.dueDate;
+          todoDueDateDiv.append(todoDueDateLabel, todoDueDateInput);
 
           todoPriorityLegend.innerText = 'Select task priority'
 
@@ -94,8 +100,7 @@ function editTodoForm() {
           todoPriorityFieldset.append(todoPriorityLegend, todoPriorityHighInput, todoPriorityHighLabel, todoPriorityMediumInput, todoPriorityMediumLabel,
             todoPriorityLowInput, todoPriorityLowLabel);
         
-          newTodoForm.append(todoTitleLabel, todoTitleInput, todoDescriptionLabel, todoDescriptionInput, 
-            todoDueDateLabel, todoDueDateInput, todoPriorityFieldset, todoAddButton);
+          newTodoForm.append(todoTitleDiv, todoDescriptionDiv, todoDueDateDiv, todoPriorityFieldset, todoAddButton);
         
           todoDetailsSection.appendChild(newTodoForm);
         

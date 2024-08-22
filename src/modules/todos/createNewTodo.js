@@ -7,9 +7,9 @@ import renderSidebarModule from "../sidebar/renderSidebarModule";
 import sortBasedOnPriority from "./sortTodoArray";
 
 function createNewTodo() {
-  const todoTitle = document.querySelector('.new_todo_form > input:nth-child(2)');
-  const todoDescription = document.querySelector('.new_todo_form > input:nth-child(4)');
-  const todoDueDate = document.querySelector('.new_todo_form > input:nth-child(6)');
+  const todoTitle = document.querySelector('#todoTitle');
+  const todoDescription = document.querySelector('#todoDescription');
+  const todoDueDate = document.querySelector('#todoDueDate');
   const todoPriority = document.querySelector('input[name="todoPriority"]:checked');
 
   const newTodo = new Todo();
