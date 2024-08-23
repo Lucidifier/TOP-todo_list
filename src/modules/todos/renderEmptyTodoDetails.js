@@ -4,7 +4,7 @@ function renderEmptyTodoDetails() {
   const todoDetailsMessage1 = document.createElement('p');
   const todoDetailsMessage2 = document.createElement('p');
   todoDetailsMessage1.innerText = 'No task selected';
-  todoDetailsMessage2.innerText = 'Click below to select a task';
+  todoDetailsMessage2.innerText = 'Click below to select/add a task';
   todoDetails.append(todoDetailsMessage1, todoDetailsMessage2);
   todosModuleContent.appendChild(todoDetails);
 }

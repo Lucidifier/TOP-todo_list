@@ -37,6 +37,7 @@ function createNewTodoForm() {
   todoTitleInput.type = 'text';
   todoTitleInput.id = 'todoTitle';
   todoTitleInput.name = 'todoTitle';
+  todoTitleInput.maxLength = 15;
   todoTitleDiv.append(todoTitleLabel, todoTitleInput)
 
   todoDescriptionLabel.innerText = 'Description: ';
@@ -44,6 +45,7 @@ function createNewTodoForm() {
   todoDescriptionInput.type = 'text';
   todoDescriptionInput.id = 'todoDescription';
   todoDescriptionInput.name = 'todoDescription';
+  todoDescriptionInput.maxLength = 15;
   todoDescriptionDiv.append(todoDescriptionLabel, todoDescriptionInput);
 
   todoDueDateLabel.innerText = 'Due Date: ';
