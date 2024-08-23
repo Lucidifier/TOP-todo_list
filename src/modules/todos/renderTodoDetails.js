@@ -16,9 +16,17 @@ function renderTodoDetails() {
           todosModuleContent.removeChild(todosModuleContent.firstChild);
 
           let currentTodo = document.createElement('div');
+          let currentTodoTitleDiv = document.createElement('div');
+          let currentTodoTitleSpan = document.createElement('span');
           let currentTodoTitle = document.createElement('p');
+          let currentTodoDescriptionDiv = document.createElement('div');
+          let currentTodoDescriptionSpan = document.createElement('span');
           let currentTodoDescription = document.createElement('p');
+          let currentTodoDueDateDiv = document.createElement('div');
+          let currentTodoDueDateSpan = document.createElement('span');
           let currentTodoDueDate = document.createElement('p');
+          let currentTodoPriorityDiv = document.createElement('div');
+          let currentTodoPrioritySpan = document.createElement('span');
           let currentTodoPriority = document.createElement('p');
           let currentStatusDiv = document.createElement('div');
           let currentTodoStatusLabel = document.createElement('label')
@@ -26,20 +34,24 @@ function renderTodoDetails() {
 
           // console.log(projectsModuleTodosListIfRendered.classList)
 
-          currentTodoTitle.innerText = `Name: ${element.title}`;
-          currentTodoDescription.innerText = `Description: ${element.description}`;
+          currentTodoTitleSpan.innerText = 'Title:'
+          currentTodoTitle.innerText = `${element.title}`;
+          currentTodoDescriptionSpan.innerText = 'Description:'
+          currentTodoDescription.innerText = `${element.description}`;
+          currentTodoDueDateSpan.innerText = 'Due Date:'
           const formatedDate = format(element.dueDate, 'dd/MMM/y');
-          currentTodoDueDate.innerText = `Due Date: ${formatedDate}`;
+          currentTodoDueDate.innerText = `${formatedDate}`;
 
+          currentTodoPrioritySpan.innerText = 'Priority:'
           switch (element.priority) {
             case 3:
-              currentTodoPriority.innerText = 'Priority: High';
+              currentTodoPriority.innerText = 'High';
               break;
             case 2:
-              currentTodoPriority.innerText = 'Priority: Medium';
+              currentTodoPriority.innerText = 'Medium';
               break;
             case 1:
-              currentTodoPriority.innerText = 'Priority: Low';
+              currentTodoPriority.innerText = 'Low';
               break;
           }
 
@@ -47,7 +59,7 @@ function renderTodoDetails() {
           currentTodoStatusCheckbox.name = 'statusCheckbox';
           currentTodoStatusCheckbox.id = 'statusCheckbox';
           currentTodoStatusLabel.for = 'statusCheckbox';
-          currentTodoStatusLabel.innerText = 'Task complete';
+          currentTodoStatusLabel.innerText = 'Task complete:';
 
           if(element.status == true) {
             currentTodoStatusCheckbox.checked = false;
@@ -56,9 +68,13 @@ function renderTodoDetails() {
           };
 
           currentTodoStatusCheckbox.addEventListener('change', changeStatusCheckbox);
-          
+
+          currentTodoTitleDiv.append(currentTodoTitleSpan, currentTodoTitle);
+          currentTodoDescriptionDiv.append(currentTodoDescriptionSpan, currentTodoDescription);
+          currentTodoDueDateDiv.append(currentTodoDueDateSpan, currentTodoDueDate);
+          currentTodoPriorityDiv.append(currentTodoPrioritySpan, currentTodoPriority);
           currentStatusDiv.append(currentTodoStatusLabel, currentTodoStatusCheckbox);
-          currentTodo.append(currentTodoTitle, currentTodoDescription, currentTodoDueDate, currentTodoPriority, currentStatusDiv);
+          currentTodo.append(currentTodoTitleDiv, currentTodoDescriptionDiv, currentTodoDueDateDiv, currentTodoPriorityDiv, currentStatusDiv);
           todoDetails.appendChild(currentTodo);
           todosModuleContent.insertBefore(todoDetails, todosModuleContent.firstChild);
         }
