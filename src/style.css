@@ -66,6 +66,10 @@ header {
   font-size: var(--big_font);
   font-family: 'title-font', monospace;
   font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -106,4 +110,12 @@ main {
 
 footer {
   grid-row: 3/4; 
+  padding-top: 20px;
+  font-family: 'description-font', monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--fourth_color);
 }
